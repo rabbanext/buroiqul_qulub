@@ -15,13 +15,22 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(8),
         itemCount: entries.length,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 50,
-            color: Colors.amber[colorCodes[index]],
-            child: Center(
-                child: Text(
-                    'Entry ${entries[index]}'
-                )
+          return GestureDetector(
+            onTap: (){
+              print("Container ${entries[index]} clicked");
+            },
+            child: Container(
+              height: 50,
+              color: Colors.green[colorCodes[index]],
+              child: Center(
+                  child: Text(
+                      'Entry ${entries[index]}',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                      ),
+                  )
+              ),
             ),
           );
         }

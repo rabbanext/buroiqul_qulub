@@ -1,3 +1,4 @@
+import 'package:buroiqul_qulub/screens/halaman_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -6,7 +7,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> entries = <String>['A', 'A', 'A', 'A', 'A', 'A', 'A', '﷽', 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم'];
+  final List<String> indexHal = <String>['A', 'tawasul', 'A', 'duafajr', 'A', 'A', 'A', '﷽', 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم'];
   final List<int> colorCodes = <int>[600, 500, 600, 500, 100, 500, 600, 500, 100];
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -51,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: ListView.builder(
                   padding: const EdgeInsets.all(12),
-                  itemCount: entries.length,
+                  itemCount: indexHal.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       padding: const EdgeInsets.only(bottom: 12),
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 100,
                             child: Center(
                                 child: Text(
-                                    'Baaariss ${entries[index]}',
+                                    'Baaariss ${indexHal[index]}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
                                         fontSize: 26,
@@ -72,7 +73,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           onTap: () {
-                            print("Container ${entries[index]} clicked");
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Halaman(indexHal[index])),
+                            );
+                            print("Container ${indexHal[index]} clicked");
                           },
                         ),
                       ),

@@ -7,7 +7,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> indexHal = <String>['A', 'tawasul', 'A', 'duafajr', 'A', 'A', 'A', '﷽', 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم'];
+  final List<String> judul = <String>['A', 'tawasul', 'A', 'duafajr', 'Bunny2', 'A', 'video1', '﷽', 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم'];
   final List<int> colorCodes = <int>[600, 500, 600, 500, 100, 500, 600, 500, 100];
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: ListView.builder(
                   padding: const EdgeInsets.all(12),
-                  itemCount: indexHal.length,
+                  itemCount: judul.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       padding: const EdgeInsets.only(bottom: 12),
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 100,
                             child: Center(
                                 child: Text(
-                                    'Baaariss ${indexHal[index]}',
+                                    'Baaariss ${judul[index]}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
                                         fontSize: 26,
@@ -75,9 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Halaman(indexHal[index])),
+                              MaterialPageRoute(builder: (context) => PageTawasul(judul[index])),
                             );
-                            print("Container ${indexHal[index]} clicked");
                           },
                         ),
                       ),

@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Halaman extends StatelessWidget {
+class PageTawasul extends StatelessWidget {
   final String indexHal;
-
-  Halaman(this.indexHal);
-
+  PageTawasul(this.indexHal);
   final List<String> tawasul = <String>['003.jpg', '004.jpg', '005.jpg'];
   final List<String> duafajr = <String>['006.jpg', '007.jpg', '008.jpg', '009.jpg', '010.jpg', '011.jpg', '012.jpg', '013.jpg'];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +17,9 @@ class Halaman extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () { Navigator.pop(context); },
+              onPressed: () {
+                Navigator.pop(context);
+              },
               tooltip: "Kembali",
             );
           },
@@ -28,8 +27,9 @@ class Halaman extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(height: 25,),
-
+          SizedBox(
+            height: 25,
+          ),
           Text(
             'dfg $indexHal  ',
             style: TextStyle(
@@ -48,8 +48,7 @@ class Halaman extends StatelessWidget {
                     child: new Image.asset('assets/images/0/${tawasul[index]}'),
                     alignment: Alignment.center,
                   );
-                }
-            ),
+                }),
           ),
         ],
       ),

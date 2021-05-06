@@ -7,8 +7,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> judul = <String>['A', 'tawasul', 'A', 'duafajr', 'Bunny2', 'A', 'video1', '﷽', 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم'];
-  final List<int> colorCodes = <int>[600, 500, 600, 500, 100, 500, 600, 500, 100];
+  final List<String> pages = <String>['PageTawasul', 'PageDuafajr', 'PageWirdullatif', 'PageRotibulhaddad', 'PageRotibulattos', 'PageWirdusakron', 'PageWiridbadasholat', 'PageDoaTahajud', 'PageSholathajat', 'Pagedoabirwalidain'];
+  final List<String> judul = <String>['Tawasul', 'Dua Fajr', 'Wirdullatif', 'rotibul Haddad', 'Rotibulattos', 'Wird sakronn', 'Wirid bada sholat', 'DoaTahajud', 'Sholathajat', 'Doa Birwalidain'];
+  final List<int> colorCodes = <int>[600, 500, 600, 500, 100, 500, 600, 500, 100, 100];
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -41,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             // SizedBox(height: 20,),
             Text(
-              'AAAaaaaaaa',
+              'Burooooo',
               style: TextStyle(
                 color: Colors.green,
                 fontWeight: FontWeight.w900,
@@ -52,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: ListView.builder(
                   padding: const EdgeInsets.all(12),
-                  itemCount: judul.length,
+                  itemCount: pages.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       padding: const EdgeInsets.only(bottom: 12),
@@ -64,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 100,
                             child: Center(
                                 child: Text(
-                                    'Baaariss ${judul[index]}',
+                                    '> ${judul[index]}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
                                         fontSize: 26,
@@ -72,11 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 )
                             ),
                           ),
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => PageTawasul(judul[index])),
-                            );
+                          onTap: () {Navigator.pushNamed(context, pages[index]);
                           },
                         ),
                       ),

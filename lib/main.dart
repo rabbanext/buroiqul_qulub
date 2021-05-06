@@ -1,3 +1,4 @@
+import 'package:buroiqul_qulub/screens/halaman_screen.dart';
 import 'package:buroiqul_qulub/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -13,6 +14,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
       ),
       home: Splash(),
+      initialRoute: '/',
+      routes: {
+        'PageTawasul': (context) => PageTawasul(),
+        'PageDuafajr': (context) => PageDuafajr(),
+        'PageWirdullatif': (context) => PageWirdullatif(),
+        'PageRotibulhaddad': (context) => PageRotibulhaddad(),
+        'PageRotibulattos': (context) => PageRotibulattos(),
+        'PageWirdusakron': (context) => PageWirdusakron(),
+        'PageWiridbadasholat': (context) => PageWiridbadasholat(),
+        'PageDoaTahajud': (context) => PageDoaTahajud(),
+        'PageSholathajat': (context) => PageSholathajat(),
+        'Pagedoabirwalidain': (context) => Pagedoabirwalidain(),
+      },
     );
   }
 }

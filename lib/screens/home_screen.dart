@@ -19,6 +19,23 @@ class _HomeScreenState extends State<HomeScreen> {
     'PageSholathajat',
     'PageDoabirwalidain',
     'PageYasin',
+    'PageDuayasin',
+    'PageAlkahfi',
+    'PageAsmaulhusna',
+    'PageDuaasmaulhusna',
+    'PageIstighfarjami',
+    'PageQasidahmuhammadiyah',
+    'PageShalatlidafibala',
+    'PageShalatbasyri',
+    'PageShalawatfathi',
+    'PageShalatidrok',
+    'PageSholatthibbilqulub',
+    'PageSholatulmanjiyyah',
+    'PageSholatghoznawiyah',
+    'PageBasyairulkhoirot',
+    'PageQodkafani',
+    'PageTahlil',
+    'PageDoatahlil',
   ];
   final List<String> judul = <String>[
     'Tawasul',
@@ -32,6 +49,23 @@ class _HomeScreenState extends State<HomeScreen> {
     'Sholathajat',
     'Doa Birwalidain',
     'PageYasin',
+    'PageDuayasin',
+    'PageAlkahfi',
+    'PageAsmaulhusna',
+    'PageDuaasmaulhusna',
+    'Istighfar jami',
+    'Qasidah muhammadiyah',
+    'Shalat lidafibala',
+    'PageShalatbasyri',
+    'Shalawet fathi',
+    'Shalatidrok',
+    ' Sholatthibbilqulub',
+    ' Sholatul manjiyyah',
+    ' Sholat ghoznawiyah',
+    'Basyairulkhoirot',
+    'Qod kafani',
+    'Tahlil',
+    'Doa Tahlil',
   ];
 
   @override
@@ -70,16 +104,17 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    height: 200,
+                    height: 300,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 12, right: 12),
                     child: BlurryContainer(
+                      padding: EdgeInsets.only(left: 16, top: 16, right: 16),
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20)),
                       bgColor: Colors.white,
-                      height: 87 * (judul.length.toDouble() - 1),
+                      height: 77 * (judul.length.toDouble() - 1),
                       child: ListView.builder(
                           physics: NeverScrollableScrollPhysics(),
                           //padding: const EdgeInsets.all(12),
@@ -95,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               ),
-                              padding: const EdgeInsets.only(bottom: 12),
+                              padding: const EdgeInsets.only(bottom: 8),
                               child: Material(
                                 borderRadius: BorderRadius.all(Radius.circular(12)),
                                 color: Colors.white,

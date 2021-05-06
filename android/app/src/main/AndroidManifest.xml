@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rabbanos.buroiqul_qulub">
    <application
-        android:label="buroiqul_qulub"
+        android:label="Buroiqul Qulub"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

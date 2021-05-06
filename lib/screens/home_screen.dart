@@ -6,8 +6,32 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> pages = <String>['PageTawasul', 'PageDuafajr', 'PageWirdullatif', 'PageRotibulhaddad', 'PageRotibulattos', 'PageWirdusakron', 'PageWiridbadasholat', 'PageDoaTahajud', 'PageSholathajat', 'PageDoabirwalidain', 'PageYasin'];
-  final List<String> judul = <String>['Tawasul', 'Dua Fajr', 'Wirdullatif', 'rotibul Haddad', 'Rotibulattos', 'Wird sakronn', 'Wirid bada sholat', 'DoaTahajud', 'Sholathajat', 'Doa Birwalidain', 'PageYasin'];
+  final List<String> pages = <String>[
+    'PageTawasul',
+    'PageDuafajr',
+    'PageWirdullatif',
+    'PageRotibulhaddad',
+    'PageRotibulattos',
+    'PageWirdusakron',
+    'PageWiridbadasholat',
+    'PageDoaTahajud',
+    'PageSholathajat',
+    'PageDoabirwalidain',
+    'PageYasin',
+  ];
+  final List<String> judul = <String>[
+    'Tawasul',
+    'Dua Fajr',
+    'Wirdullatif',
+    'rotibul Haddad',
+    'Rotibulattos',
+    'Wird sakronn',
+    'Wirid bada sholat',
+    'DoaTahajud',
+    'Sholathajat',
+    'Doa Birwalidain',
+    'PageYasin',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text(
                   "Buroiqul Qulub",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 29,
-                    fontWeight: FontWeight.w900
-                  ),
+                  style: TextStyle(fontSize: 29, fontWeight: FontWeight.w900),
                 ),
               ),
             ),
@@ -41,7 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                     margin: EdgeInsets.only(left: 12, right: 12),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20)),
                       color: Color(0xFFF4F7FB),
                     ),
                     height: 94 * judul.length.toDouble(),
@@ -58,7 +81,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   spreadRadius: 2,
                                   blurRadius: 8,
                                 ),
-                              ],),
+                              ],
+                            ),
                             padding: const EdgeInsets.only(bottom: 12),
                             child: Material(
                               borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -70,15 +94,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 70,
                                   child: Center(
                                       child: Text(
-                                        judul[index],
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: 26,
-                                        ),
-                                      )
-                                  ),
+                                    judul[index],
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 26,
+                                    ),
+                                  )),
                                 ),
-                                onTap: () {Navigator.pushNamed(context, pages[index]);
+                                onTap: () {
+                                  Navigator.pushNamed(context, pages[index]);
                                 },
                               ),
                             ),

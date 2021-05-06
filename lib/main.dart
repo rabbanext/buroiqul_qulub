@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
         'PageWiridbadasholat': (context) => PageWiridbadasholat(),
         'PageDoaTahajud': (context) => PageDoaTahajud(),
         'PageSholathajat': (context) => PageSholathajat(),
-        'Pagedoabirwalidain': (context) => Pagedoabirwalidain(),
+        'PageDoabirwalidain': (context) => PageDoabirwalidain(),
+        'PageYasin': (context) => PageYasin(),
       },
     );
   }

@@ -7,9 +7,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> pages = <String>['PageTawasul', 'PageDuafajr', 'PageWirdullatif', 'PageRotibulhaddad', 'PageRotibulattos', 'PageWirdusakron', 'PageWiridbadasholat', 'PageDoaTahajud', 'PageSholathajat', 'Pagedoabirwalidain'];
-  final List<String> judul = <String>['Tawasul', 'Dua Fajr', 'Wirdullatif', 'rotibul Haddad', 'Rotibulattos', 'Wird sakronn', 'Wirid bada sholat', 'DoaTahajud', 'Sholathajat', 'Doa Birwalidain'];
-  final List<int> colorCodes = <int>[600, 500, 600, 500, 100, 500, 600, 500, 100, 100];
+  final List<String> pages = <String>['PageTawasul', 'PageDuafajr', 'PageWirdullatif', 'PageRotibulhaddad', 'PageRotibulattos', 'PageWirdusakron', 'PageWiridbadasholat', 'PageDoaTahajud', 'PageSholathajat', 'PageDoabirwalidain', 'PageYasin'];
+  final List<String> judul = <String>['Tawasul', 'Dua Fajr', 'Wirdullatif', 'rotibul Haddad', 'Rotibulattos', 'Wird sakronn', 'Wirid bada sholat', 'DoaTahajud', 'Sholathajat', 'Doa Birwalidain', 'PageYasin'];
+  final List<int> colorCodes = <int>[600, 500, 600, 500, 100, 500, 600, 500, 100, 100, 300];
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -38,50 +38,52 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            // SizedBox(height: 20,),
-            Text(
-              'Burooooo',
-              style: TextStyle(
-                color: Colors.green,
-                fontWeight: FontWeight.w900,
-                fontSize: 26,
+        child: InteractiveViewer(
+          child: Column(
+            children: [
+              // SizedBox(height: 20,),
+              Text(
+                'Burooooo',
+                style: TextStyle(
+                  color: Colors.green,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 26,
+                ),
               ),
-            ),
-            SizedBox(height: 20,),
-            Expanded(
-              child: ListView.builder(
-                  padding: const EdgeInsets.all(12),
-                  itemCount: pages.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      padding: const EdgeInsets.only(bottom: 12),
-                      child: Material(
-                        color: Colors.green[colorCodes[index]],
-                        child: InkWell(
-                          splashColor: Theme.of(context).primaryColorLight,
-                          child: Container(
-                            height: 100,
-                            child: Center(
-                                child: Text(
-                                    '> ${judul[index]}',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 26,
-                                    ),
-                                )
+              SizedBox(height: 20,),
+              Expanded(
+                child: ListView.builder(
+                    padding: const EdgeInsets.all(12),
+                    itemCount: pages.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: Material(
+                          color: Colors.green[colorCodes[index]],
+                          child: InkWell(
+                            splashColor: Theme.of(context).primaryColorLight,
+                            child: Container(
+                              height: 100,
+                              child: Center(
+                                  child: Text(
+                                      '> ${judul[index]}',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 26,
+                                      ),
+                                  )
+                              ),
                             ),
+                            onTap: () {Navigator.pushNamed(context, pages[index]);
+                            },
                           ),
-                          onTap: () {Navigator.pushNamed(context, pages[index]);
-                          },
                         ),
-                      ),
-                    );
-                  }
+                      );
+                    }
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       endDrawer: Drawer(

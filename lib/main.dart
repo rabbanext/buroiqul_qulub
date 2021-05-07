@@ -1,7 +1,8 @@
-import 'package:buroiqul_qulub/screens/halaman_screen.dart';
-import 'package:buroiqul_qulub/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
+
+import 'package:buroiqul_qulub/screens/halaman_screen.dart';
+import 'package:buroiqul_qulub/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 

@@ -2,7 +2,7 @@
     package="com.rabbanos.buroiqul_qulub">
    <application
         android:label="Buroiqul Qulub"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

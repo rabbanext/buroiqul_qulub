@@ -43,18 +43,18 @@ class _HomeScreenState extends State<HomeScreen> {
     "الورد اللطيف",
     "Ratib Al Haddad",
     "Ratib Al 'Aththas",
-    "Wirdus Sakron",
-    "Wirid Ba'da sholat",
-    "Doa Tahajud",
-    "Sholat Hajat",
+    "Wirdus Sakron", //ورد السكران
+    "ورد بعد الصلاة",
+    "دعاء صلاة تهجد",
+    "صلاة الحاجة",
     "Do'a Birrul Walidain",
-    "Yasin",
-    "Do'a Yasin",
-    "Alkahfi",
-    "Asmaul Husna",
-    "Do'a Asmaul Husna",
+    "سورة يٰسۤ",
+    "دعاء يٰسۤ",
+    "الكهف",
+    "الاسماء الحسنى",
+    "دعاء الاسماء الحسنى",
     "الاستغفار الجمع",
-    "Qosidah Muhammadiyah",
+    "قصيدة محمدية",
     "الصلاة لدافع بالاء",
     "الصلاة البشري",
     "الصلاة الفاتح",
@@ -64,8 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
     "الصلاة الغزنوية",
     "بشائر الخيرات",
     "قد كفاني",
-    "Tahlil",
-    "Do'a Tahlil",
+    "التهليل",
+    "دعاء التهليل",
   ];
 
   @override
@@ -84,22 +84,6 @@ class _HomeScreenState extends State<HomeScreen> {
               width: double.infinity,
               alignment: Alignment.center,
             ),
-            Container(
-              color: Colors.white24,
-              padding: EdgeInsets.all(24),
-              // child: Align(
-              //   alignment: Alignment.topCenter,
-              //   child: Text(
-              //     "Majelis\nBuroiqul Qulub",
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontSize: 29,
-              //         fontWeight: FontWeight.w900,
-              //         color: Colors.white,
-              //     ),
-              //   ),
-              // ),
-            ),
             SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -114,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20)),
                       bgColor: Colors.white,
-                      height: 77 * (judul.length.toDouble() - 1),
+                      height: 72 * (judul.length.toDouble() - 1),
                       child: ListView.builder(
                           physics: NeverScrollableScrollPhysics(),
                           //padding: const EdgeInsets.all(12),
@@ -138,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   borderRadius: BorderRadius.all(Radius.circular(12)),
                                   splashColor: Theme.of(context).primaryColorLight,
                                   child: Container(
-                                    height: 65,
+                                    height: 60,
                                     child: Center(
                                         child: Text(
                                       judul[index],
